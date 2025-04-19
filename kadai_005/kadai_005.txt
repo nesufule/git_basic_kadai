@@ -1,0 +1,95 @@
+$ mkdir git_challenge
+
+81804@DESKTOP-4EFGSNF MINGW64 ~
+$ cd git_challenge
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge
+$ touch hello_world.txt
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge
+$ echo "Hello,world!" >> hello_world.txt
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge
+$ cat hello_world.txt
+Hello,world!
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge
+$ git add hello_world.txt
+fatal: not a git repository (or any of the parent directories): .git
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge
+$ git init
+Initialized empty Git repository in C:/Users/81804/git_challenge/.git/
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge (main)
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge (main)
+$ git add hello_world.txt
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge (main)
+$ git commit -m "hello_world.txtを追加"
+[main (root-commit) 30880f7] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge (main)
+$ echo "こんにちは、世界" >> hello_world.txt
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge (main)
+$ cat hello_world.txt
+Hello,world!
+こんにちは、世界
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge (main)
+$ commit -m 
+bash: commit: command not found
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge (main)
+$ git commit -m "日本語訳を追加"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello_world.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitattributes
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge (main)
+$ git log
+commit 30880f7ec366e7cabf015f4eaa5c59ba5cea8cdd (HEAD -> main)
+Author: nesufule <nesufule@gmail.com>
+Date:   Sat Apr 19 23:38:16 2025 +0900
+
+    hello_world.txtを追加
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge (main)
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge (main)
+$ git add hello_world.txt
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge (main)
+$ git commit -m "日本語訳を追加"
+[main 3ee3ca7] 日本語訳を追加
+ 1 file changed, 1 insertion(+)
+
+81804@DESKTOP-4EFGSNF MINGW64 ~/git_challenge (main)
+$ git log
+commit 3ee3ca7b2fb6d173adddd2549396d7351aca7342 (HEAD -> main)
+Author: nesufule <nesufule@gmail.com>
+Date:   Sat Apr 19 23:42:15 2025 +0900
+
+    日本語訳を追加
+
+commit 30880f7ec366e7cabf015f4eaa5c59ba5cea8cdd
+Author: nesufule <nesufule@gmail.com>
+Date:   Sat Apr 19 23:38:16 2025 +0900
+
+    hello_world.txtを追加
